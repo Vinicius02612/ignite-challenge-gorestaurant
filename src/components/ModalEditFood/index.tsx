@@ -10,8 +10,8 @@ import { FoodType } from '../../types';
 interface ModalAddFoodProps{
   isOpen: boolean;
   setIsOpen: () => void;
-  handleUpdateFood: (data: SubmitData) => void;
-  editingFood: FoodType;
+  handleUpdateFood: (data: SubmitData) => Promise<void>;
+  editingFood: SubmitData;
 }
 
 type SubmitData = Omit<FoodType, 'available'>
